@@ -26,6 +26,7 @@ export interface Food {
 export interface Destination {
   id: string;
   city: string;
+  state: string;
   country: string;
   days: string;
   blurb: string;

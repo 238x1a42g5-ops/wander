@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import heroLisbon from "@/assets/hero-lisbon.jpg";
+import heroIndia from "@/assets/hero-india.jpg";
 import stayHomestay from "@/assets/stay-homestay.jpg";
 import stayViewHotel from "@/assets/stay-viewhotel.jpg";
 import stayGuesthouse from "@/assets/stay-guesthouse.jpg";
@@ -13,17 +13,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wanderline — Plan the day, your way" },
+      { title: "Wanderline — Plan your India trip, your way" },
       {
         name: "description",
         content:
-          "A travel helper that plans your day around your style — most-visited landmarks, hidden gems, or local suggestions — with homestays, scenic-view hotels, and famous local foods.",
+          "A travel helper for India that plans your day around your style — most-visited landmarks, hidden gems, or local suggestions — with homestays, scenic-view hotels, and famous local foods.",
       },
-      { property: "og:title", content: "Wanderline — Plan the day, your way" },
+      { property: "og:title", content: "Wanderline — Plan your India trip, your way" },
       {
         property: "og:description",
         content:
-          "Preference-based day itineraries, homestays, scenic-view hotels, and famous local foods — one calm, walkable route at a time.",
+          "Preference-based day itineraries across India — Jaipur, Kerala, Varanasi, Manali and Goa — with homestays, scenic-view hotels, and famous local foods.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -41,7 +41,7 @@ const styleColors: Record<TravelStyle, string> = {
 };
 
 function Index() {
-  const [destinationId, setDestinationId] = useState("lisbon");
+  const [destinationId, setDestinationId] = useState("jaipur");
   const [style, setStyle] = useState<TravelStyle>("popular");
   const [saved, setSaved] = useState(false);
 
@@ -163,8 +163,8 @@ function Index() {
           {/* Hero image */}
           <div className="lg:col-span-5">
             <img
-              src={heroLisbon}
-              alt="Golden hour over Lisbon rooftops and the river"
+              src={heroIndia}
+              alt="Golden hour over Jaipur's Hawa Mahal and the pink city"
               width={1024}
               height={1280}
               className="aspect-[4/5] w-full rounded-2xl object-cover outline-1 -outline-offset-1 outline-black/5"
